@@ -1,21 +1,36 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
-    kotlin("jvm") version "1.9.23"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+    kotlin("jvm") version "1.9.22"
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+allprojects {
+    group = "world.avionik"
+    version = "1.0.1"
 
-repositories {
-    mavenCentral()
+    apply {
+        plugin("org.jetbrains.kotlin.jvm")
+        plugin("com.github.johnrengelman.shadow")
+    }
+
+    repositories {
+        mavenCentral()
+
+        // minecraft repositories
+        maven("https://repo.papermc.io/repository/maven-public/")
+        maven("https://oss.sonatype.org/content/repositories/central")
+        maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+        maven("https://repo.loohpjames.com/repository/")
+    }
 }
 
-dependencies {
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-}
+subprojects {
+    dependencies {
+        compileOnly(kotlin("stdlib"))
+    }
 
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
+    tasks.named("shadowJar", ShadowJar::class) {
+        mergeServiceFiles()
+    }
 }
