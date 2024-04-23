@@ -6,7 +6,7 @@ plugins {
 }
 
 allprojects {
-    group = "world.avionik"
+    group = "world.estaria"
     version = "1.0.1"
 
     apply {
