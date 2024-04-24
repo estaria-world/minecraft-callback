@@ -1,21 +1,8 @@
-plugins {
-    kotlin("jvm")
-}
-
-group = "org.example"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-}
+    // minecraft-callback dependencies
+    api(project(":callback-api"))
 
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
+    // velocity dependencies
+    compileOnly("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
+    annotationProcessor("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
 }

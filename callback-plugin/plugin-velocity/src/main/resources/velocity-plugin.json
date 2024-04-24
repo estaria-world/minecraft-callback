@@ -1,0 +1,10 @@
+{
+  "id": "minecraft-callback",
+  "name": "minecraft-callback",
+  "version": "1.0.1",
+  "authors": [
+    "MrManHD"
+  ],
+  "dependencies": [],
+  "main": "world.estaria.minecraft.callback.plugin.velocity.VelocityPlugin"
+}
