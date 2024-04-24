@@ -14,7 +14,15 @@ object CallbackStore {
      * @param callback to execute
      */
     fun addCallback(id: String, callback: Callback) {
-        callbacks[id] = callback
+        this.callbacks[id] = callback
+    }
+
+    /**
+     * Gets a list of all callback ids
+     * @return callback id list
+     */
+    fun getCallbackIds(): List<String> {
+        return this.callbacks.keys.toList()
     }
 
     /**
@@ -23,7 +31,7 @@ object CallbackStore {
      * @param callbackUser the user to execute this callback
      */
     fun executeCallback(id: String, callbackUser: CallbackUser) {
-        callbacks[id]?.execute(callbackUser)
+        this.callbacks[id]?.execute(callbackUser)
     }
 
 }
