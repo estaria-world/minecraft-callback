@@ -22,6 +22,16 @@ allprojects {
         maven("https://oss.sonatype.org/content/repositories/central")
         maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
         maven("https://repo.loohpjames.com/repository/")
+
+        // estaria repositories
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/estaria-world/paper-command-kit")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+            }
+        }
     }
 }
 
