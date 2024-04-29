@@ -46,7 +46,7 @@ class VelocityPlugin @Inject constructor(
                 .executes {
                     val commandSource = it.source
                     val callbackId = it.getArgument("callbackId", String::class.java)
-                    commandSource.sendMessage(Component.text("<gray>Callback with id <#dff9fb>$callbackId was executed"))
+                    commandSource.sendMessage(Component.text("<gray>Callback with id <#dff9fb>$callbackId<gray> was executed"))
 
                     val callbackUser = CallbackUserImpl(commandSource)
                     executeCallback(callbackId, callbackUser)

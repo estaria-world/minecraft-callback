@@ -21,7 +21,7 @@ class CallbackCommand : CommandExecutor {
         }
 
         val callbackId = args[1]
-        sender.sendMessage(Component.text("<gray>Callback with id <#dff9fb>$callbackId was executed"))
+        sender.sendMessage(Component.text("<gray>Callback with id <#dff9fb>$callbackId<gray> was executed"))
 
         val callbackUser = CallbackUserImpl(sender)
         executeCallback(callbackId, callbackUser)
