@@ -13,7 +13,7 @@ import world.estaria.minecraft.callback.api.executeCallback
 
 class CallbackCommand {
 
-    @Command("callback <id>")
+    @Command("paperCallback <id>")
     @Permission("callback.command.callback")
     fun execute(sender: CommandSender, @Argument("id") id: String) {
         sender.sendMessage(Component.text("<gray>Callback with id <#dff9fb>$id<gray> was executed"))
