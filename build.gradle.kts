@@ -17,6 +17,9 @@ allprojects {
     repositories {
         mavenCentral()
 
+        // jitpack repositories
+        maven("https://jitpack.io/")
+
         // minecraft repositories
         maven("https://repo.papermc.io/repository/maven-public/")
         maven("https://oss.sonatype.org/content/repositories/central")
