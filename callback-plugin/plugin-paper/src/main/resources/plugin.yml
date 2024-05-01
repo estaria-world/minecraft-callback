@@ -5,6 +5,3 @@ website: github.com/estaria-world
 author: MrManHD
 
 main: world.estaria.minecraft.callback.plugin.paper.SpigotPlugin
-
-depend:
-  - spigot-dependency-loader
