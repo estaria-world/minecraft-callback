@@ -1,0 +1,12 @@
+name: minecraft-callback
+version: '1.0.1'
+api-version: '1.21'
+website: github.com/estaria-world
+author: MrManHD
+
+main: world.estaria.minecraft.callback.plugin.paper.PaperPlugin
+
+dependencies:
+  server:
+    paper-dependency-loader:
+      load: BEFORE
