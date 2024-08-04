@@ -5,7 +5,7 @@ dependencies {
     api(project(":callback-api"))
 
     // estaria dependencies
-    compileOnly("world.estaria:paper-command-kit:1.0.6")
+    compileOnly("world.estaria:paper-command-kit:1.1.0")
 
     // paper dependencies
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")

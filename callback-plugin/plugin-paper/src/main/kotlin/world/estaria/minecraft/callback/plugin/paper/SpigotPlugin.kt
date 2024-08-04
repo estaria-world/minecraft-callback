@@ -7,7 +7,7 @@ import world.estaria.paper.command.kit.PaperCommandKit
  * @author Niklas Nieberler
  */
 
-class PaperPlugin : JavaPlugin() {
+class SpigotPlugin : JavaPlugin() {
 
     override fun onEnable() {
         PaperCommandKit.create(this)
