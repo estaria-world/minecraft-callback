@@ -15,7 +15,7 @@ import world.estaria.minecraft.callback.api.executeCallback
 
 class CallbackCommand {
 
-    @Command("paperCallback <id>")
+    @Command("callback <id>")
     @Permission("callback.command.callback")
     fun execute(sender: CommandSender, @Argument("id", suggestions = "callbackIds") id: String) {
         sender.sendMessage(Component.text("<gray>Callback with id <#dff9fb>$id<gray> was executed"))
