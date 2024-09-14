@@ -28,20 +28,9 @@ allprojects {
 
         // estaria repositories
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/estaria-world/paper-command-kit")
-            credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
-            }
-        }
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/estaria-world/github-file-manager")
-            credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
-            }
+            name = "estaria"
+            url = uri("https://repo.estaria.world/releases")
+            credentials(PasswordCredentials::class.java)
         }
     }
 }

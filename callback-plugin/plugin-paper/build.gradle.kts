@@ -8,7 +8,7 @@ dependencies {
     compileOnly("world.estaria:paper-command-kit:1.1.0")
 
     // paper dependencies
-    compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
+    compileOnly("world.estaria.coco.paper:coco-paper-api:1.21.1-R0.1-SNAPSHOT")
 }
 
 tasks.named("shadowJar", ShadowJar::class) {
